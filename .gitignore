@@ -2,4 +2,7 @@ node_modules/
 
 dist/
 
+uploads/usuario/
+uploads/producto/
+
 vars.env

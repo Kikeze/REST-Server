@@ -39,10 +39,21 @@ const existeProductoPorID = async (item = "") => {
     }
 }
 
+const listaCatalogos = async (catalogo = "", lista = []) => {
+    const incluida = lista.includes( catalogo );
+
+    if( !incluida ) {
+        throw new Error(`La coleccion ${catalogo} no esta permitida`);
+    }
+
+    return true;
+}
+
 module.exports = {
     esRoleValido,
     existeCorreo,
     existeUsuarioPorID,
     existeCategoriaPorID,
-    existeProductoPorID
+    existeProductoPorID,
+    listaCatalogos
 }
